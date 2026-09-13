@@ -1,0 +1,127 @@
+(footprint "KRL1220"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Precision current sensing low resistance chip resistors")
+	(property "Reference" "REF**"
+		(at 0 -1.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "05588ddc-c243-4d23-a47b-3d8cd6a44f66")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "KRL1220"
+		(at 0 1.7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a0180f40-777e-41af-9197-a05e5bb1bbd2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ba5fb284-2fd8-42e8-9d14-a86d7278914f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c0f9fe92-1587-4e67-b56f-ab603bdbbf11")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.4 -0.7)
+		(end 0.4 -0.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a278fee-757a-464a-91f1-3c705f55efe7")
+	)
+	(fp_line
+		(start -0.4 0.7)
+		(end 0.4 0.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d4c9cfca-9ce4-471b-a7e8-692a5398d160")
+	)
+	(fp_rect
+		(start -1.1 -0.7)
+		(end 1.1 0.7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3589f1cc-1ab1-4d07-a177-119ca43a18b2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "14e675bd-9683-49ea-8ca7-cb48761f9ec9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.9 0)
+		(size 0.7 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.212766)
+		(uuid "ee1a8ac4-1c75-4e08-a992-6c7db3a75032")
+	)
+	(pad "2" smd roundrect
+		(at 0.9 0)
+		(size 0.7 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.212766)
+		(uuid "3abb89b5-6d77-43c5-8bfa-588a83d03a13")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/KRL1220.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

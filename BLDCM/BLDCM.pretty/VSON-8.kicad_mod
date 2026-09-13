@@ -1,0 +1,187 @@
+(footprint "VSON-8"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Very Small Outline Non-leaded 8 pins 3×3x1 mm")
+	(property "Reference" "REF**"
+		(at 0 -2.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "79858d31-d7f2-42fe-a889-705e33624e84")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "VSON-8"
+		(at 0 3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "fc2120ae-43fa-4760-a349-c1d9d003c005")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85d38937-4073-48d7-ada2-0da131461299")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e7498817-a401-4292-ab3e-2dd9d3fb8bd3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.269995 -1.599996)
+		(end -1.269996 -1.600003)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1dfa4b93-6efa-4cb2-a3d0-aaffd73b641c")
+	)
+	(fp_line
+		(start 1.269995 1.600003)
+		(end -1.269996 1.599996)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c9a1a11c-a7e3-4f4e-a085-37270cbc27ee")
+	)
+	(fp_circle
+		(center -1.7 -1.6)
+		(end -1.6365 -1.6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "a12d6310-8741-482e-afca-20ef92b54541")
+	)
+	(fp_rect
+		(start -1.5 -1.5)
+		(end 1.5 1.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3f2768ec-b87e-43b2-8e4f-496870dd9cc8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 4.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5b474ce5-15fc-40da-b9bf-9110777bc63c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.45 -0.975)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "66963139-968f-46ad-9396-514218724c71")
+	)
+	(pad "2" smd roundrect
+		(at -1.45 -0.325)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "29f03830-3f6a-433d-ab55-c5882fb58a91")
+	)
+	(pad "3" smd roundrect
+		(at -1.45 0.325)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "709a47be-f454-4f9f-9e0c-8efa69b76a87")
+	)
+	(pad "4" smd roundrect
+		(at -1.45 0.975)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "4232b1ff-dc75-4113-ac07-e842950f10aa")
+	)
+	(pad "5" smd roundrect
+		(at 1.45 0.975)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "1847109e-aadd-445f-93aa-1c83da4d7761")
+	)
+	(pad "6" smd roundrect
+		(at 1.45 0.325)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "e7dec78f-7e85-47f5-bb27-ca6804887c7f")
+	)
+	(pad "7" smd roundrect
+		(at 1.45 -0.325)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "5e25818d-d19d-41ee-8497-db7001b876c5")
+	)
+	(pad "8" smd roundrect
+		(at 1.45 -0.975)
+		(size 0.7 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "562c4b28-8ec9-460b-b26f-def25436545e")
+	)
+	(pad "PAD" smd roundrect
+		(at 0 0)
+		(size 1.65 2.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.05)
+		(uuid "acd75ce6-d870-4e49-8795-8a829e61ed46")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/VSON-8.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

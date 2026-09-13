@@ -1,0 +1,230 @@
+(footprint "53048-0310"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Pin Header, Right Angle, Signal, 1.25 mm, 1 Rows, 3 Contacts, Through Hole Right Angle")
+	(property "Reference" "REF**"
+		(at 0 -2.4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2095686d-ce25-4249-a3ef-dc49a6185627")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "53048-0310"
+		(at 0 5.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f3b3ed8e-c4da-4026-9cf0-a5041398c07b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.farnell.com/datasheets/2697738.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9fd29a5c-a304-4f32-9488-bc5c4a9a96af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "51912e0d-63db-4815-b214-2314182748ed")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.794005 -1.142996)
+		(end -2.794005 4.445001)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7726fea2-6e7b-4f36-8b7e-1e69f4e31c72")
+	)
+	(fp_line
+		(start -2.794005 -1.142996)
+		(end -1.905002 -1.142996)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "83eac6ba-40be-4117-bc79-d4f232a61b46")
+	)
+	(fp_line
+		(start -2.794005 4.445001)
+		(end -2.413002 4.445001)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "667af422-cdfc-4313-a72d-4493ed938b71")
+	)
+	(fp_line
+		(start -2.413002 3.937001)
+		(end -2.413002 4.445001)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a2ad1867-32bf-4a7d-a14b-52f14de9939d")
+	)
+	(fp_line
+		(start -2.413002 3.937001)
+		(end 2.413002 3.937001)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "263503f6-acd7-40ba-b727-61c5cca1aa1f")
+	)
+	(fp_line
+		(start -1.905002 -1.142996)
+		(end -1.905002 -0.508)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f773fc87-1f12-4397-a504-0f3bb5683f4d")
+	)
+	(fp_line
+		(start 1.905002 -1.142996)
+		(end 1.904995 -0.507993)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "800a46c0-0a69-4fe2-ae64-078b09d430b9")
+	)
+	(fp_line
+		(start 1.905002 -1.142996)
+		(end 2.793998 -1.143003)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6a20938b-0ce9-4661-b759-ecd9cbdf2b38")
+	)
+	(fp_line
+		(start 2.413002 3.937001)
+		(end 2.413002 4.445001)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1f4e58e3-711b-4115-88ed-d23fe6226b38")
+	)
+	(fp_line
+		(start 2.413002 4.445001)
+		(end 2.793998 4.445008)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "640ee870-9895-4f73-82b7-6683b086a09e")
+	)
+	(fp_line
+		(start 2.793998 -1.143003)
+		(end 2.793998 4.445008)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6eb153a1-0f43-465a-8a6e-e27d74123ff9")
+	)
+	(fp_rect
+		(start -3.3 -1.6)
+		(end 3.3 4.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e801a702-fd41-41fe-bebd-9c4e86c5c7f7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 7.3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9c26a964-1a79-4e5b-930f-896195488f88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -1.250002 0.000007 180)
+		(size 0.9 0.9)
+		(drill 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 90)
+		(uuid "ffa03dea-f094-4c86-b0d0-6b95028ddf50")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0 180)
+		(size 0.9 0.9)
+		(drill 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 90)
+		(uuid "1f71dd6c-fb17-49a7-a1ff-ba0b5622981a")
+	)
+	(pad "3" thru_hole circle
+		(at 1.250002 0.000007 180)
+		(size 0.9 0.9)
+		(drill 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 90)
+		(uuid "6ae9d822-7ca1-4c9b-90c1-a2b5ffeb1891")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/53048-0310.step"
+		(offset
+			(xyz -0.020619 -3.467609 1.7)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
+)

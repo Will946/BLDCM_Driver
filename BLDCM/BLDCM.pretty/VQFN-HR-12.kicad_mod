@@ -1,0 +1,218 @@
+(footprint "VQFN-HR-12"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Very Small Quad Flat No-Lead Heat-Rated 12 Pins")
+	(property "Reference" "REF**"
+		(at 0.05 -2.4 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4b154de7-9ed1-48ab-984e-b3fc6bad9e47")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "VQFN-HR-12"
+		(at 0.2 2.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "7dc0372b-d876-49a9-95e6-8f1a275de437")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2120.pdf?ts=1748897252786&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS2120#page=1&zoom=100,0,677"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "af44c055-fd88-450f-9ac5-8f6719cab1fe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a594ea21-565e-4a03-855e-f8dee4d02dde")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.2 1.25)
+		(end -1.2 0.81)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d1b8e681-c4f1-46a9-b364-fed8bc659b80")
+	)
+	(fp_line
+		(start 1.2 -1.25)
+		(end 1.2 -0.81)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d99a2850-951f-43be-9241-c0add9888e38")
+	)
+	(fp_line
+		(start 1.2 1.25)
+		(end 1.2 0.81)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1117ab60-934a-4b85-95f2-dc7ab9b6a5b3")
+	)
+	(fp_circle
+		(center -1.2 -0.8)
+		(end -1.1365 -0.8)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "afd63617-39b2-4c15-b9e8-7a109ce95772")
+	)
+	(fp_rect
+		(start -1.1 -1.3)
+		(end 1.1 1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "58385d00-1188-4cd5-a0da-9eef1458cd2d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.2 4.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "388fc41c-6db0-4949-b01a-1940ba9de577")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.675 -0.35)
+		(size 1.05 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "75a14b38-0d4f-4c92-bf59-2571e2af8d07")
+	)
+	(pad "2" smd roundrect
+		(at -0.675 0.35)
+		(size 1.05 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "d5247bc7-6b6e-468d-8b3a-c8eacde817e2")
+	)
+	(pad "3" smd roundrect
+		(at -0.75 1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "e0fac825-9b36-4d23-8c4e-da03d48ae6d2")
+	)
+	(pad "4" smd roundrect
+		(at -0.25 1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "b0855d18-8ea6-425c-ad21-895c55c24faa")
+	)
+	(pad "5" smd roundrect
+		(at 0.25 1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "7b0f4046-93f2-4a2d-9374-3df2b60d2fba")
+	)
+	(pad "6" smd roundrect
+		(at 0.75 1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "9de81b4f-f506-4398-bc25-92604f0ad193")
+	)
+	(pad "7" smd roundrect
+		(at 0.675 0.35)
+		(size 1.05 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1212be1b-d47a-457b-9eda-9315e53db44b")
+	)
+	(pad "8" smd roundrect
+		(at 0.675 -0.35)
+		(size 1.05 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "89bc5cb7-39da-40a1-a1ed-de529ec108da")
+	)
+	(pad "9" smd roundrect
+		(at 0.75 -1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "180dfb12-9bf3-46aa-94c4-86985ad5c6f8")
+	)
+	(pad "10" smd roundrect
+		(at 0.25 -1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "79e93c17-4f1a-4b1b-8161-7f916bab6594")
+	)
+	(pad "11" smd roundrect
+		(at -0.25 -1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "7d9b40e8-ad07-43fc-aff5-273734f9623c")
+	)
+	(pad "12" smd roundrect
+		(at -0.75 -1.15)
+		(size 0.2 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "e5f05cd3-70c3-4a8e-b6cb-f39fa798d679")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/VQFN-HR-12.step"
+		(offset
+			(xyz 0 0 -0.05)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

@@ -1,0 +1,159 @@
+(footprint "TSOT-23-5"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Thin 5-lead SOT-23 surface mount package. Max height 1.0mm")
+	(property "Reference" "REF**"
+		(at 0 -2.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d4635354-e4f7-42a3-8de5-e0171a99d6e9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "TSOT-23-5"
+		(at 0 3.3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "6bed1569-0d33-4adc-ade8-42f28a1af39c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "41ebcd0b-c22a-45a7-b3fb-eec82e8c3f7b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "01087263-08b6-4950-8f1d-f9491b337c37")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.6 -0.6)
+		(end -1.6 0.7)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "89b720af-7b3d-4107-8776-cc7169a54ae4")
+	)
+	(fp_line
+		(start 1.6 -0.6)
+		(end 1.6 0.7)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1e4b20e4-306a-46d3-a63e-a44abea535ef")
+	)
+	(fp_circle
+		(center -1.6 1.79164)
+		(end -1.5 1.79164)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "448a32b6-1bc9-4cfe-895f-8ff9639ef6f2")
+	)
+	(fp_rect
+		(start -1.6 -1.6)
+		(end 1.6 1.6)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "17b2c890-1ba9-4ade-9f99-38705bc70ffb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 4.8 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "253070df-1352-44ea-b9e1-b70a89484649")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.95 1.3 90)
+		(size 1.05 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "c00ee3b0-8c5a-4292-a611-223daff355c7")
+	)
+	(pad "2" smd roundrect
+		(at 0 1.3 90)
+		(size 1.05 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "945a1c32-33a0-4b3f-8889-002d42a2cd4f")
+	)
+	(pad "3" smd roundrect
+		(at 0.95 1.3 90)
+		(size 1.05 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "55cb1d21-157b-441b-8705-7e9ed7b01942")
+	)
+	(pad "4" smd roundrect
+		(at 0.95 -1.3 90)
+		(size 1.05 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "425cb596-8b6b-49ae-936f-cd7dd8f11cf0")
+	)
+	(pad "5" smd roundrect
+		(at -0.95 -1.3 90)
+		(size 1.05 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "0a5ceccb-a2fb-404f-86a5-2aa4fe644909")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/TSOT-23-5.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -90)
+		)
+	)
+)

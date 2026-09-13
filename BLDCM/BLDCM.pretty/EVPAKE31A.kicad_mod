@@ -1,0 +1,225 @@
+(footprint "EVPAKE31A"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "3.8 mm x 1.9 mm Side-operational SMD Light Touch Switches")
+	(property "Reference" "REF**"
+		(at 0 -3.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b7434dbb-84d5-4b68-a4e4-e1062c006147")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "EVPAKE31A"
+		(at 0 3.8 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "efdeb6fa-c5d5-443c-b897-147d106d3759")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "643b4a76-848e-48ce-ae9c-68082dc8da2a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3e0de3b9-c258-4b22-91ca-c7d9934341cb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.807996 2.070007)
+		(end -1.808003 2.19701)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "464254d7-addb-46ac-867c-543edce6f961")
+	)
+	(fp_line
+		(start -1.8 -2.120994)
+		(end -1.800007 -1.993976)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5595a4a9-b276-402f-ad81-918a7a557bd7")
+	)
+	(fp_line
+		(start -0.791997 2.197017)
+		(end -1.808003 2.19701)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d157f4c2-3d9d-4f73-9f94-c5f16a751033")
+	)
+	(fp_line
+		(start -0.783994 -2.120987)
+		(end -1.8 -2.120994)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d653bb1e-85a2-4fd2-827f-d27bab60f48c")
+	)
+	(fp_line
+		(start 1.199986 -0.723984)
+		(end 1.2 0.8)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a036feb0-087b-4da6-a8e2-0919993f12aa")
+	)
+	(fp_rect
+		(start -2 -2.6)
+		(end 1.6 2.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "9c39d394-737f-4014-bdfe-c978e2d93499")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 5.3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "ffe244e9-e832-4566-b711-8899f46f85ac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole custom
+		(at 0 -1.85 225)
+		(size 0.000001 0.000001)
+		(drill 0.55
+			(offset 0.35 -0.75)
+		)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.075)
+		(solder_paste_margin 0.000001)
+		(thermal_bridge_angle 90)
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy 0 0) (xy 0.0806 0.90935) (xy -0.3182 1.30815) (xy -1.27279 0.35355) (xy -0.45962 -0.45962)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "5ad54616-963f-44cc-9049-cfaeea8d29f4")
+	)
+	(pad "" np_thru_hole custom
+		(at 0 1.85 135)
+		(size 0.000001 0.000001)
+		(drill 0.55
+			(offset 0.35 0.75)
+		)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.075)
+		(solder_paste_margin 0.000001)
+		(thermal_bridge_angle 90)
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy 0 0) (xy 0.0806 -0.90935) (xy -0.3182 -1.30815) (xy -1.27279 -0.35355) (xy -0.45962 0.45962)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "85c9e931-931b-4f3a-a1a8-61629bb7c101")
+	)
+	(pad "1" smd rect
+		(at -1.35 -1.4)
+		(size 1.1 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "edbf8f57-412e-4c0a-be21-c1205acce0bf")
+	)
+	(pad "2" smd rect
+		(at -1.35 1.4)
+		(size 1.1 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "04fcda29-26d2-41bc-8bee-4cacaadf5a9c")
+	)
+	(pad "NC" smd rect
+		(at -1.5 0.038001)
+		(size 1.1 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "81cb8ff7-d147-456b-961c-aa39c29865d8")
+	)
+	(pad "NC" smd circle
+		(at 0.310976 1.888004)
+		(size 0.0254 0.0254)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "47a557c1-b5bb-4543-8bbd-6dfeeda0c5af")
+	)
+	(pad "NC" smd circle
+		(at 0.31099 -1.811988)
+		(size 0.0254 0.0254)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 90)
+		(uuid "4ccefb2a-7de8-488b-8d66-cf7fc1fed112")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/EVPAKE31A.step"
+		(offset
+			(xyz -1.188484 -0.005508 0.8)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 90)
+		)
+	)
+)

@@ -1,0 +1,350 @@
+(footprint "505578-0460"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "2.00mm Pitch, Micro-Lock Plus PCB Header, Single Row, Right-Angle, Surface Mount, 0.10µm Gold Plating, Positive Lock, 4 Circuits, Low-Halogen, Natural (White)")
+	(property "Reference" "REF**"
+		(at -4.3 -5.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "16f22f7b-8265-4663-a827-9abf73cb7905")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "505578-0460"
+		(at 0.1 6.7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "dfb75331-4be0-4fb1-b456-3f152ff30a34")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/5055780460?display=pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "faaa6ac5-470c-47b5-a14f-9fe3bee17407")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "88fa663c-e836-46fb-a0b9-1324899656d2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -6.2 4.2)
+		(end -6.2 2.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9275a625-7357-49d2-ae4a-493a3359ca99")
+	)
+	(fp_line
+		(start -3.9 4.2)
+		(end -6.2 4.2)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "053d7a03-fa93-4d31-b5e5-aa6b58cbea6d")
+	)
+	(fp_line
+		(start 3.9 4.2)
+		(end 6.2 4.2)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e5c44872-b28f-4c9a-a4e0-db9b74a9808e")
+	)
+	(fp_line
+		(start 6.2 4.2)
+		(end 6.2 2.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b9a43c3b-0321-446e-8d4e-f840cea53afb")
+	)
+	(fp_line
+		(start -6.4 -2.2)
+		(end -6.4 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "ddab178e-5ea3-4494-90c7-bbcf0f9804bd")
+	)
+	(fp_line
+		(start -6.4 4.4)
+		(end 0 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "43863809-97f8-4b70-acfd-b21188b41377")
+	)
+	(fp_line
+		(start -6.2 -2.9)
+		(end -5.6 -4.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a7c070ab-14e8-4545-be68-7da6c17bbb96")
+	)
+	(fp_line
+		(start -6.2 -2.2)
+		(end -6.4 -2.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "ed5a1559-d492-4a31-a753-26eb2f6f8539")
+	)
+	(fp_line
+		(start -6.2 -2.2)
+		(end -6.2 -2.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "38173108-caae-46e9-960a-559ca4e916f6")
+	)
+	(fp_line
+		(start -3.05 -4.6)
+		(end -5.6 -4.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e62152c6-5314-474e-82b4-7779f47f3c01")
+	)
+	(fp_line
+		(start -2.5 -4)
+		(end -3.05 -4.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "668730b6-d8ed-43cf-b4b3-d81ec662267e")
+	)
+	(fp_line
+		(start -2.5 -3)
+		(end -2.5 -4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4331cf96-8143-4189-9fe9-02c3b81fcc29")
+	)
+	(fp_line
+		(start 0 -3)
+		(end -2.5 -3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6291038c-fad9-4ec9-9e58-cfb0c40c4c24")
+	)
+	(fp_line
+		(start 0 -3)
+		(end 2.5 -3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "58596e91-50db-4e91-b736-8101470a98f5")
+	)
+	(fp_line
+		(start 2.5 -4)
+		(end 3.05 -4.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c454bfe4-e765-4221-955e-676f0f7938a9")
+	)
+	(fp_line
+		(start 2.5 -3)
+		(end 2.5 -4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "57024eed-d5eb-44d0-974c-79583f5d5dcb")
+	)
+	(fp_line
+		(start 3.05 -4.6)
+		(end 5.6 -4.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "97cdba03-f83b-4146-9cd0-969afc7aafce")
+	)
+	(fp_line
+		(start 6.2 -2.9)
+		(end 5.6 -4.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "192b1d84-88af-478f-9413-8f6dee8f3204")
+	)
+	(fp_line
+		(start 6.2 -2.2)
+		(end 6.2 -2.9)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "98e0d471-4aa1-4c12-bfbf-23dea6b47d9d")
+	)
+	(fp_line
+		(start 6.2 -2.2)
+		(end 6.4 -2.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "dcb86e84-29cd-4264-b728-714bb9832c77")
+	)
+	(fp_line
+		(start 6.4 -2.2)
+		(end 6.4 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "61fbe872-06ac-472b-8ea9-6fa0a7b0cc2c")
+	)
+	(fp_line
+		(start 6.4 4.4)
+		(end 0 4.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "775e3e7f-0d01-4a95-ad36-8f7469dbc50d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.1 8.2 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "3d87e8b0-eb22-4fcf-addf-8cfa150c3495")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -3 4.15)
+		(size 1 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "f0c1926b-fb7d-4e7b-9a81-2976cbc74c85")
+	)
+	(pad "2" smd roundrect
+		(at -1 4.15)
+		(size 1 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "f7267467-f4d3-4ace-bbb4-551e38ef50bc")
+	)
+	(pad "3" smd roundrect
+		(at 1 4.15)
+		(size 1 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "a68895ad-1b3f-4595-bb03-59d65ffa40a3")
+	)
+	(pad "4" smd roundrect
+		(at 3 4.15)
+		(size 1 2.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "003616e6-812c-4f52-bef3-da0aa29833f7")
+	)
+	(pad "MP1" smd roundrect
+		(at -5.4 0)
+		(size 1.8 3.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "856a332e-16dc-4131-b269-bbb498661d65")
+	)
+	(pad "MP2" smd roundrect
+		(at 5.4 0)
+		(size 1.8 3.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "09d3ef0e-0ba5-4ed9-a217-8500cffdeeb2")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/505578-0460.step"
+		(offset
+			(xyz 0 6.9 -0.7)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
+)

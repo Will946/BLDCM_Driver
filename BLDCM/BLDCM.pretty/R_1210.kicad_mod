@@ -1,0 +1,128 @@
+(footprint "R_1210"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Resistor")
+	(tags "resistor")
+	(property "Reference" "REF**"
+		(at -0.1 -2.3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "63f18a55-5fad-472c-92c3-67e4f690f88a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "R_1210"
+		(at 0 2.4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "fdc8080b-dd10-4773-9ff1-3341ca6fc43a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d4171f50-51d4-4012-ac0c-ac06cf32cd9d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0a9a0342-4bfe-412b-ae41-674e7f641262")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.723737 -1.355)
+		(end 0.723737 -1.355)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7b04fde1-0a72-4c5d-a189-e1e7b5ba620c")
+	)
+	(fp_line
+		(start -0.723737 1.355)
+		(end 0.723737 1.355)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "02aeb179-5f1d-4fbe-99e1-826148ce35f9")
+	)
+	(fp_rect
+		(start -2.25 -1.4)
+		(end 2.25 1.4)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "007d122d-dfd6-4992-92ea-38b08d6321f2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.9 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c8ed9430-0ad7-48e4-abf5-dabedb020fc8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.55 0)
+		(size 1.3 2.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.192308)
+		(uuid "09b2bfc5-f587-413e-b396-37c12f77f932")
+	)
+	(pad "2" smd roundrect
+		(at 1.55 0)
+		(size 1.3 2.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.192308)
+		(uuid "ab44dfd8-e564-4195-8459-424568f4c1d3")
+	)
+	(embedded_fonts no)
+	(model "../BrenoCQ.3dshapes/R_1210.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
