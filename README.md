@@ -35,9 +35,9 @@ The electronics consist of two interconnected custom-designed Printed Circuit Bo
 The top PCB is the brain of the controller. It runs the control loop, reads all of the position/motion sensors, and exposes the debug and status interfaces a developer needs while bringing the system up.
 
 <div align="center">
-  <img src="BLDCM-MCU.png" height="260" alt="MCU PCB top side render"/>
+  <img src="BLDCM-MCU/BLDCM-MCU.png" height="260" alt="MCU PCB top side render"/>
   &nbsp;&nbsp;
-  <img src="BLDCM-MCUB.png" height="260" alt="MCU PCB bottom side render"/>
+  <img src="BLDCM-MCU/BLDCM-MCUB.png" height="260" alt="MCU PCB bottom side render"/>
 </div>
 
 **How it works:**
@@ -53,9 +53,9 @@ The top PCB is the brain of the controller. It runs the control loop, reads all 
 The bottom PCB handles everything high-current: driving the motor phases, sensing voltage and current, and providing the external connectivity for power and communication.
 
 <div align="center">
-  <img src="BLDCM-Power.png" height="260" alt="Power PCB top side render"/>
+  <img src="BLDCM-Pwr/BLDCM-Power.png" height="260" alt="Power PCB top side render"/>
   &nbsp;&nbsp;
-  <img src="BLDCM-Powerb.png" height="260" alt="Power PCB bottom side render"/>
+  <img src="BLDCM-Pwr/BLDCM-Powerb.png" height="260" alt="Power PCB bottom side render"/>
 </div>
 
 **How it works:**
