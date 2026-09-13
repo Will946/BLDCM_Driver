@@ -1,7 +1,3 @@
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/3808f84a-4d3c-40c2-98d6-4721f3d3a842"/>
-</div>
-
 # BLDC Motor Controller
 
 > [!NOTE]
@@ -9,15 +5,10 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Folder Structure](#folder-structure)
-- [Mechanical](#mechanical)
 - [Electronics](#electronics)
   - [MCU PCB (Top Board)](#mcu-pcb-top-board)
   - [Power PCB (Bottom Board)](#power-pcb-bottom-board)
-- [Firmware](#firmware)
-- [Simulation](#simulation)
 - [Results](#results)
-- [License](#license)
 
 ---
 
@@ -25,113 +16,65 @@
 
 This project aims to develop a **high-precision Brushless DC (BLDC) motor controller** from scratch, covering both hardware and firmware aspects. The controller is designed for advanced motor control applications, leveraging a powerful STM32 microcontroller, a dedicated motor driver IC, and comprehensive sensing capabilities for precise operation and rotor position estimation.
 
-The core of the system is a custom two-board stack: an MCU board housing the main control logic and a power board managing motor drive and sensing.
-
-## Folder Structure
-
-The project is organized into logical directories to enhance maintainability and readability:
-
-* `simulation/`: Contains code and files related to motor control simulation.
-* `mechanical/`: Houses all mechanical design files (CAD models, part designs).
-* `electronics/`: Stores KiCad project files for both the MCU and Power PCBs, including schematics and PCB layouts.
-* `firmware/`: Contains all the embedded software for the STM32 microcontroller.
-* `controller/`: Specific implementations of motor control algorithms (trapezoidal, FOC).
-* `common/`: Shared utilities and communication definitions across different parts of the project.
-
----
-
-## Mechanical
-
-The mechanical aspects of this project are centered around integrating the custom electronics with an off-the-shelf **EM3215 BLDC motor**. It's important to note that, for this specific project, the **motor's original windings are being utilized**, and there are no plans to re-wrap the wire around the coils. The `mechanical` folder contains various CAD files (FreeCAD) for components like the rotor adapter, chassis, and PCB cutouts, ensuring a perfect fit and robust assembly.
+The core of the system is a custom two-board stack: an MCU board housing the main control logic and a power board managing motor drive and sensing. The two boards connect through a Molex board-to-board stack connector, keeping the whole assembly compact enough to sit directly behind the motor.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/35e5e8cf-3523-439b-9cf8-6a88cd3317ed" height="300"/>
+  <img src="BLDCM.png" height="320" alt="Bench setup during firmware bring-up, oscilloscope showing PWM and phase signals"/>
+  &nbsp;&nbsp;
+  <img src="Motor.png" height="320" alt="3D model cross-section of the motor housing"/>
 </div>
 
 ---
 
 ## Electronics
 
-The electronics consist of two interconnected custom-designed Printed Circuit Boards (PCBs), designed using **KiCad**. Both boards are **4-layer designs** to facilitate efficient signal routing and power integrity. A **Molex PCB stack connector** is used to establish a robust electrical connection between the MCU and Power PCBs.
+The electronics consist of two interconnected custom-designed Printed Circuit Boards (PCBs), designed using **KiCad**. Both boards are **4-layer, circular designs** sized to fit inside the motor housing, and stack together through a **Molex board-to-board connector** that carries power, control signals, and communication lines between them.
 
 ### MCU PCB (Top Board)
 
-The top PCB serves as the brain of the controller, housing the main microcontroller and various sensors and interfaces for user interaction and precise feedback.
+The top PCB is the brain of the controller. It runs the control loop, reads all of the position/motion sensors, and exposes the debug and status interfaces a developer needs while bringing the system up.
 
-| Top Layer | Layer 1 | Layer 2 | Bottom Layer | 3D Top View | 3D Bottom View |
-| :------------------: | :---------------: | :---------------: | :---------------------: | :---------: | :------------: |
-| <img height="130" alt="Layer 1 (Top Copper)" src="https://github.com/user-attachments/assets/a0bdffdf-dbb2-43c1-b529-12d50b2d14fd" /> | <img height="130" alt="Layer 2 (Inner 1)" src="https://github.com/user-attachments/assets/55852d03-11d7-4d15-98dc-e1f933781a28" /> | <img height="130" alt="Layer 3 (Inner 2)" src="https://github.com/user-attachments/assets/21bd59ee-b05b-4289-b452-49b394edb754" /> | <img height="130" alt="Layer 4 (Bottom Copper)" src="https://github.com/user-attachments/assets/6d4225da-9f7a-4c76-8256-08973aba0530" /> | <img height="130" alt="3D Top View" src="https://github.com/user-attachments/assets/0e6ac78a-482c-4bc0-8312-50df366507aa" /> | <img height="130" alt="3D Bottom View" src="https://github.com/user-attachments/assets/6db4fe6c-68bf-409a-b58a-c0ea64c7a62d" /> |
+<div align="center">
+  <img src="BLDCM-MCU.png" height="260" alt="MCU PCB top side render"/>
+  &nbsp;&nbsp;
+  <img src="BLDCM-MCUB.png" height="260" alt="MCU PCB bottom side render"/>
+</div>
 
-**MCU PCB Key Components:**
-- **STM32F4 Microcontroller:** The central processing unit for control algorithms, sensor data acquisition, and communication.
-- **AS5048A Angle Position Encoder:** Provides 14-bit absolute rotor position feedback for precise commutation and control.
-- **SK6805 LED Ring:** A customizable visual indicator for status and debugging.
-- **Reset Button:** For convenient system resets.
-- **ISM330DHCX IMU (Inertial Measurement Unit):** Provides acceleration and angular velocity data, useful for advanced motion control or system stabilization.
-
-**MCU PCB v1.0 Release Package:**
-- **[KiCad Project](https://github.com/brenocq/bldc-motor/tree/electronics/v1.0/electronics/BLDCM-MCU)**
-- **[Schematic (PDF)](https://github.com/brenocq/bldc-motor/blob/electronics/v1.0/electronics/BLDCM-MCU/BLDCM-MCU.pdf)**
-- **[Interactive BOM (HTML)](https://brenocq.s3.us-east-1.amazonaws.com/BLDCM/BLDCM-MCU-BOM-v1.0.html)**
-- **[Gerbers (ZIP)](https://github.com/brenocq/bldc-motor/releases/download/electronics%2Fv1.0/BLDCM-MCU-v1.0-gerber.zip)**
+**How it works:**
+- The **STM32F4 microcontroller** sits at the center of the board and runs the motor control algorithm (trapezoidal or FOC) in a fast timer-driven loop, reading sensor data and updating the PWM duty cycles sent down to the power board on every cycle.
+- The **AS5048A** magnetic angle encoder reads the rotor's absolute position with 14-bit resolution off a magnet mounted on the motor shaft. This gives the controller true rotor position for commutation, rather than relying on back-EMF sensing, which matters a lot at low speed and standstill.
+- The **ISM330DHCX IMU** adds acceleration and angular velocity data from the board itself, which is useful for detecting external motion or vibration and for any application where the motor's own orientation/movement (not just the rotor's) needs to be tracked.
+- An **SK6805 RGB LED ring** wraps around the board's edge and is driven per-LED to show system status (idle, running, fault, etc.) at a glance without needing a debugger attached.
+- A **reset button** is broken out on the edge for quick resets during bring-up and testing.
+- The top-side connector routes down to the power board through the Molex stack connector, carrying the PWM/gate signals, sensor feedback, and shared power rails between the two boards.
 
 ### Power PCB (Bottom Board)
 
-The bottom PCB handles the high-current motor driving functions and essential power monitoring.
+The bottom PCB handles everything high-current: driving the motor phases, sensing voltage and current, and providing the external connectivity for power and communication.
 
-| Top Layer | Layer 1 | Layer 2 | Bottom Layer | 3D Top View | 3D Bottom View |
-| :------------------: | :---------------: | :---------------: | :---------------------: | :---------: | :------------: |
-| <img height="130" alt="Power PCB Layer 1 (Top Copper)" src="https://github.com/user-attachments/assets/faa62cd5-9e9b-43b6-9e27-ffdd01d51ee1" /> | <img height="130" alt="Power PCB Layer 2 (Inner 1)" src="https://github.com/user-attachments/assets/73f51755-ee40-4ae1-b4b3-89a09125597c" /> | <img height="130" alt="Power PCB Layer 3 (Inner 2)" src="https://github.com/user-attachments/assets/59dc8296-1d9e-4efc-b00d-c2b493198382" /> | <img height="130" alt="Power PCB Layer 4 (Bottom Copper)" src="https://github.com/user-attachments/assets/ed9737b9-2924-47f6-ae12-5b252e8fc6ef" /> | <img height="130" alt="Power PCB 3D Top View" src="https://github.com/user-attachments/assets/97b7900b-0eeb-4e15-8f6d-265f3d73ea2c" /> | <img height="130" alt="Power PCB 3D Bottom View" src="https://github.com/user-attachments/assets/57febf18-13cf-4071-8960-21bef18e5e0f" /> |
+<div align="center">
+  <img src="BLDCM-Power.png" height="260" alt="Power PCB top side render"/>
+  &nbsp;&nbsp;
+  <img src="BLDCM-Powerb.png" height="260" alt="Power PCB bottom side render"/>
+</div>
 
-**Power PCB Key Components:**
-- **TMC6300 Motor Driver:** A 3-phase motor driver that translates the MCU's PWM and control signals into high-current outputs for the motor phases.
-- **TCAN1462 CAN Transceiver:** Enables robust CAN FD communication for daisy-chaining motors in series.
-- **J-Link Connector:** Provides easy SWD debugging and programming for the STM32 microcontroller.
-- **USB Connector:** Facilitates direct USB Full-Speed communication for data logging, control, and power input.
-- **Micro-Lock Plus Connectors:** Robust 4-pin Molex connectors that provide a vibration-resistant link for power delivery and CAN bus communications.
-- **Voltage Sensors (x4):** One monitors the DC bus voltage, while three dedicated sensors measure filtered phase voltages for safe operation and FOC.
-- **INA240 Current Sensors (x3):** Three precision analog-output current sensors enable high-speed, accurate phase current measurement for FOC.
-
-**Power PCB v1.0 Release Package:**
-- **[KiCad Project](https://github.com/brenocq/bldc-motor/tree/electronics/v1.0/electronics/BLDCM-Power)**
-- **[Schematic (PDF)](https://github.com/brenocq/bldc-motor/blob/electronics/v1.0/electronics/BLDCM-Power/BLDCM-Power.pdf)**
-- **[Interactive BOM (HTML)](https://brenocq.s3.us-east-1.amazonaws.com/BLDCM/BLDCM-Power-BOM-v1.0.html)**
-- **[Gerbers (ZIP)](https://github.com/brenocq/bldc-motor/releases/download/electronics%2Fv1.0/BLDCM-Power-v1.0-gerber.zip)**
-
----
-
-## Firmware
-
-The firmware, developed for the **STM32F4** microcontroller, is the intelligence behind the motor control. It includes:
-
-* **Low-level Peripheral Drivers:** Custom drivers for ADC, timers, GPIO, SPI, I2C, UART, USB, and DMA to efficiently manage hardware resources.
-* **Motor Control Algorithms:** Implementation of both **trapezoidal** and **Field-Oriented Control (FOC)** algorithms, located in the `controller` directory, to provide flexible and high-performance motor driving capabilities.
-* **Sensor Integration:** Code to interface with the MT6701 encoder, INA239-Q1 current sensors, voltage sensor, and ISM330DHCX IMU for comprehensive feedback.
-* **System Utilities:** Logging, error handling, and platform-specific configurations for the STM32 environment.
-
-_The firmware architecture and design decisions will be documented in the future._
-
----
-
-## Simulation
-
-The `simulation` directory contains resources for simulating the BLDC motor system and visualizing the sensor data in real time. This allows for testing and validating control algorithms and system behavior in a virtual environment before deployment on the hardware. The `bldc.atta` file can be opened with [Atta](https://github.com/brenocq/atta), and it implements a basic motor model simulation and plotting of sensor data.
-
-_Instructions on how to run the BLDCM simulation with [Atta](https://github.com/brenocq/atta) will be added in the future_
+**How it works:**
+- The **TMC6300** is a fully integrated 3-phase gate driver/MOSFET bridge. It takes the PWM commutation signals from the MCU board and switches the three motor phases directly — there's no separate discrete MOSFET stage, which keeps the board small enough to fit the round form factor.
+- Three **INA240** current sense amplifiers measure the current on each motor phase in real time. This phase current feedback is what the FOC algorithm on the MCU board needs to run its current control loops (the Park/Clarke transforms depend on accurate, low-noise current readings).
+- Four voltage sensing networks monitor the **DC bus voltage** plus all **three phase voltages** (after filtering), letting the firmware detect undervoltage/overvoltage conditions and, combined with the current sensing, estimate power delivered to the motor.
+- The **TCAN1462** CAN FD transceiver lets multiple motor controllers be **daisy-chained together on a single CAN bus**, so a single host can address and command several motors (e.g. in a multi-joint robot) over one pair of wires.
+- A **J-Link 14-pin SWD connector** breaks out the STM32's debug port for flashing and live debugging with a J-Link probe.
+- A **USB-C connector** provides Full-Speed USB for data logging, host-side control, and can also be used to supply power to the board during bench testing.
+- Two **4-pin Molex Micro-Lock Plus connectors** on the sides carry motor power and CAN out to the next board in the chain, using a locking, vibration-resistant connector rather than a bare header.
 
 ---
 
 ## Results
 
-Below are some pictures/videos taken during the development. The controller design and calibration procedures will be explained in depth in the future :)
-
-https://github.com/user-attachments/assets/e86b0316-7ecf-4e15-9d3b-c0315d690438
+Below are some pictures/video taken during development, showing the bench setup used to bring up the firmware (reading out PWM and phase signals on the oscilloscope) and a cross-section render of the motor housing. The controller design and calibration procedures will be explained in depth in the future :)
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/54bf5e98-5cf2-4c85-9d33-0520dd883df0" height="300"/>
-  <img src="https://github.com/user-attachments/assets/4c7803e4-1f16-4ebd-a230-3d951dd21e42" height="300"/>
-  <img src="https://github.com/user-attachments/assets/f1e9a11f-33d6-4eaf-ae9b-b5f8f190689e" height="300"/>
-</div>
 
-## License
-This project is licensed under the MIT License - check [LICENSE](LICENSE) for details.
+**[▶ Watch the test video](BLDCTest.mp4)**
+
+</div>
